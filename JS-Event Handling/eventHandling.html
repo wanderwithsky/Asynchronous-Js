@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js in one Bundle</title>
+    <style>
+        body {
+            user-select: none;
+            font-family: sans-serif;
+        }
+
+        #abcd {
+            position: absolute;
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+
+        .lt {
+            text-decoration: line-through;
+        }
+
+        #hide{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="abcd">
+    </div> -->
+
+    <!-- <ul>
+        <li>apple</li>
+        <li>mango</li>
+        <li>banana</li>
+        <li>grapes</li>
+        <li>guava</li>
+    </ul> -->
+
+    <!-- <input type="text" placeholder="write anything">
+    <h2>Characters Left: <span></span> </h2> -->
+
+    <form>
+        <input id="name" type="text" placeholder="name">
+        <br>
+        <div id="hide">
+            <small>Name isn't valid.</small>
+            <br>
+        </div>
+        <input pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required type="email" placeholder="email">
+        <br>
+        <input type="password" placeholder="password">
+        <br>
+        <select name="" id="">
+            <option value="default" selected disabled>select</option>
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="others">others</option>
+        </select>
+        <br>
+        <textarea placeholder="Tell us about yourself..."></textarea>
+        <input type="submit">
+    </form>
+    <script src="eventHandle.js"></script>
+</body>
+
+</html>
