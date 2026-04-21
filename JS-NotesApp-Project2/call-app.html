@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call Notes UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="call-app.css">
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="form-panel">
+      <div class="panel-glow"></div>
+      <div class="panel-card">
+        <div class="panel-header">
+          <p class="eyebrow">Create and manage calls</p>
+          <h1>New Call</h1>
+          <p class="panel-copy">Sirf UI ready hai. Tum isme apna JS laga kar interactions control kar sakte ho.</p>
+        </div>
+
+        <form class="call-form">
+          <label class="field">
+            <span>Image URL</span>
+            <input type="url" placeholder="https://example.com/photo.jpg">
+          </label>
+
+          <label class="field">
+            <span>Full Name</span>
+            <input type="text" placeholder="Enter full name">
+          </label>
+
+          <label class="field">
+            <span>Home Town</span>
+            <input type="text" placeholder="Enter home town">
+          </label>
+
+          <label class="field">
+            <span>Purpose</span>
+            <input type="text" placeholder="e.g., Quick appointment note">
+          </label>
+
+          <div class="field">
+            <span>Category</span>
+            <div class="category-group">
+              <button type="button" class="category-chip emergency is-active" data-category="emergency">Emergency</button>
+              <button type="button" class="category-chip important" data-category="important">Important</button>
+              <button type="button" class="category-chip urgent" data-category="urgent">Urgent</button>
+              <button type="button" class="category-chip no-rush" data-category="no-rush">No Rush</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <span>Priority Dots</span>
+            <div class="legend-row">
+              <button type="button" class="legend-dot black is-active" data-priority="black" aria-label="Black priority"></button>
+              <button type="button" class="legend-dot purple" data-priority="purple" aria-label="Purple priority"></button>
+              <button type="button" class="legend-dot orange" data-priority="orange" aria-label="Orange priority"></button>
+              <button type="button" class="legend-dot teal" data-priority="teal" aria-label="Teal priority"></button>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-dark">Create Note</button>
+            <button type="button" class="btn btn-danger">Close</button>
+          </div>
+        </form>
+      </div>
+    </aside>
+
+    <main class="cards-panel">
+      <div class="cards-header">
+        <div>
+          <p class="eyebrow">Preview layout</p>
+          <h2>Priority Cards</h2>
+        </div>
+        <p class="header-copy">Side color dots ko tum JS se clickable bana kar card priority/order change kara sakte ho.</p>
+      </div>
+
+      <section class="cards-grid">
+        <article class="contact-card priority-black category-emergency" data-priority="black" data-category="emergency">
+          <div class="card-stack"></div>
+          <div class="card-body">
+            <div class="card-toolbar">
+              <div class="quick-actions">
+                <button type="button" class="icon-btn">+</button>
+                <button type="button" class="icon-btn">↑</button>
+                <button type="button" class="icon-btn">↓</button>
+              </div>
+              <div class="priority-dots">
+                <button type="button" class="priority-dot black is-active" data-priority="black"></button>
+                <button type="button" class="priority-dot purple" data-priority="purple"></button>
+                <button type="button" class="priority-dot orange" data-priority="orange"></button>
+                <button type="button" class="priority-dot teal" data-priority="teal"></button>
+              </div>
+            </div>
+
+            <div class="profile-row">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Fatima Uma">
+              <div>
+                <span class="mini-label">Client card</span>
+                <h3>Fatima Uma</h3>
+              </div>
+            </div>
+
+            <div class="meta-grid">
+              <div>
+                <span>Home town</span>
+                <strong>Singapore</strong>
+              </div>
+              <div>
+                <span>Bookings</span>
+                <strong>3 times</strong>
+              </div>
+            </div>
+
+            <div class="tag-row">
+              <span class="status-pill emergency">Emergency</span>
+              <span class="status-pill priority">Black Priority</span>
+            </div>
+
+            <div class="cta-row">
+              <button type="button" class="card-btn card-btn-dark">Call</button>
+              <button type="button" class="card-btn">Message</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact-card priority-purple category-urgent" data-priority="purple" data-category="urgent">
+          <div class="card-stack"></div>
+          <div class="card-body">
+            <div class="card-toolbar">
+              <div class="quick-actions">
+                <button type="button" class="icon-btn">+</button>
+                <button type="button" class="icon-btn">↑</button>
+                <button type="button" class="icon-btn">↓</button>
+              </div>
+              <div class="priority-dots">
+                <button type="button" class="priority-dot black" data-priority="black"></button>
+                <button type="button" class="priority-dot purple is-active" data-priority="purple"></button>
+                <button type="button" class="priority-dot orange" data-priority="orange"></button>
+                <button type="button" class="priority-dot teal" data-priority="teal"></button>
+              </div>
+            </div>
+
+            <div class="profile-row">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80" alt="Kiara Benson">
+              <div>
+                <span class="mini-label">Follow-up</span>
+                <h3>Kiara Benson</h3>
+              </div>
+            </div>
+
+            <div class="meta-grid">
+              <div>
+                <span>Home town</span>
+                <strong>Toronto</strong>
+              </div>
+              <div>
+                <span>Bookings</span>
+                <strong>5 times</strong>
+              </div>
+            </div>
+
+            <div class="tag-row">
+              <span class="status-pill urgent">Urgent</span>
+              <span class="status-pill priority">Purple Priority</span>
+            </div>
+
+            <div class="cta-row">
+              <button type="button" class="card-btn card-btn-dark">Call</button>
+              <button type="button" class="card-btn">Message</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact-card priority-orange category-important" data-priority="orange" data-category="important">
+          <div class="card-stack"></div>
+          <div class="card-body">
+            <div class="card-toolbar">
+              <div class="quick-actions">
+                <button type="button" class="icon-btn">+</button>
+                <button type="button" class="icon-btn">↑</button>
+                <button type="button" class="icon-btn">↓</button>
+              </div>
+              <div class="priority-dots">
+                <button type="button" class="priority-dot black" data-priority="black"></button>
+                <button type="button" class="priority-dot purple" data-priority="purple"></button>
+                <button type="button" class="priority-dot orange is-active" data-priority="orange"></button>
+                <button type="button" class="priority-dot teal" data-priority="teal"></button>
+              </div>
+            </div>
+
+            <div class="profile-row">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Aarav Malik">
+              <div>
+                <span class="mini-label">VIP contact</span>
+                <h3>Aarav Malik</h3>
+              </div>
+            </div>
+
+            <div class="meta-grid">
+              <div>
+                <span>Home town</span>
+                <strong>Mumbai</strong>
+              </div>
+              <div>
+                <span>Bookings</span>
+                <strong>8 times</strong>
+              </div>
+            </div>
+
+            <div class="tag-row">
+              <span class="status-pill important">Important</span>
+              <span class="status-pill priority">Orange Priority</span>
+            </div>
+
+            <div class="cta-row">
+              <button type="button" class="card-btn card-btn-dark">Call</button>
+              <button type="button" class="card-btn">Message</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact-card priority-teal category-no-rush" data-priority="teal" data-category="no-rush">
+          <div class="card-stack"></div>
+          <div class="card-body">
+            <div class="card-toolbar">
+              <div class="quick-actions">
+                <button type="button" class="icon-btn">+</button>
+                <button type="button" class="icon-btn">↑</button>
+                <button type="button" class="icon-btn">↓</button>
+              </div>
+              <div class="priority-dots">
+                <button type="button" class="priority-dot black" data-priority="black"></button>
+                <button type="button" class="priority-dot purple" data-priority="purple"></button>
+                <button type="button" class="priority-dot orange" data-priority="orange"></button>
+                <button type="button" class="priority-dot teal is-active" data-priority="teal"></button>
+              </div>
+            </div>
+
+            <div class="profile-row">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80" alt="Noah Green">
+              <div>
+                <span class="mini-label">Routine</span>
+                <h3>Noah Green</h3>
+              </div>
+            </div>
+
+            <div class="meta-grid">
+              <div>
+                <span>Home town</span>
+                <strong>London</strong>
+              </div>
+              <div>
+                <span>Bookings</span>
+                <strong>2 times</strong>
+              </div>
+            </div>
+
+            <div class="tag-row">
+              <span class="status-pill no-rush">No Rush</span>
+              <span class="status-pill priority">Teal Priority</span>
+            </div>
+
+            <div class="cta-row">
+              <button type="button" class="card-btn card-btn-dark">Call</button>
+              <button type="button" class="card-btn">Message</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact-card priority-black category-emergency" data-priority="black" data-category="emergency"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black is-active"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=5" alt="Anaya Roy"><div><span class="mini-label">Quick check</span><h3>Anaya Roy</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Kolkata</strong></div><div><span>Bookings</span><strong>4 times</strong></div></div><div class="tag-row"><span class="status-pill emergency">Emergency</span><span class="status-pill priority">Black Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-purple category-urgent" data-priority="purple" data-category="urgent"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple is-active"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=6" alt="Sara Khan"><div><span class="mini-label">Reschedule</span><h3>Sara Khan</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Delhi</strong></div><div><span>Bookings</span><strong>6 times</strong></div></div><div class="tag-row"><span class="status-pill urgent">Urgent</span><span class="status-pill priority">Purple Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-orange category-important" data-priority="orange" data-category="important"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange is-active"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=7" alt="Rahul Sen"><div><span class="mini-label">Reminder</span><h3>Rahul Sen</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Pune</strong></div><div><span>Bookings</span><strong>9 times</strong></div></div><div class="tag-row"><span class="status-pill important">Important</span><span class="status-pill priority">Orange Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-teal category-no-rush" data-priority="teal" data-category="no-rush"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal is-active"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=8" alt="Mia Thomas"><div><span class="mini-label">Routine</span><h3>Mia Thomas</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Sydney</strong></div><div><span>Bookings</span><strong>1 time</strong></div></div><div class="tag-row"><span class="status-pill no-rush">No Rush</span><span class="status-pill priority">Teal Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-black category-emergency" data-priority="black" data-category="emergency"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black is-active"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=9" alt="Kabir Das"><div><span class="mini-label">Hot lead</span><h3>Kabir Das</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Jaipur</strong></div><div><span>Bookings</span><strong>11 times</strong></div></div><div class="tag-row"><span class="status-pill emergency">Emergency</span><span class="status-pill priority">Black Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-purple category-urgent" data-priority="purple" data-category="urgent"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple is-active"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=10" alt="Zoya Patel"><div><span class="mini-label">Pending docs</span><h3>Zoya Patel</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Ahmedabad</strong></div><div><span>Bookings</span><strong>7 times</strong></div></div><div class="tag-row"><span class="status-pill urgent">Urgent</span><span class="status-pill priority">Purple Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-orange category-important" data-priority="orange" data-category="important"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange is-active"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=11" alt="Ethan Cole"><div><span class="mini-label">Review</span><h3>Ethan Cole</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Boston</strong></div><div><span>Bookings</span><strong>10 times</strong></div></div><div class="tag-row"><span class="status-pill important">Important</span><span class="status-pill priority">Orange Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-teal category-no-rush" data-priority="teal" data-category="no-rush"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal is-active"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=12" alt="Lina Joseph"><div><span class="mini-label">General</span><h3>Lina Joseph</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Kochi</strong></div><div><span>Bookings</span><strong>2 times</strong></div></div><div class="tag-row"><span class="status-pill no-rush">No Rush</span><span class="status-pill priority">Teal Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-black category-emergency" data-priority="black" data-category="emergency"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black is-active"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=13" alt="Neha Arora"><div><span class="mini-label">Escalation</span><h3>Neha Arora</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Lucknow</strong></div><div><span>Bookings</span><strong>12 times</strong></div></div><div class="tag-row"><span class="status-pill emergency">Emergency</span><span class="status-pill priority">Black Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-purple category-urgent" data-priority="purple" data-category="urgent"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple is-active"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=14" alt="Rohan Shah"><div><span class="mini-label">Deadline</span><h3>Rohan Shah</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Surat</strong></div><div><span>Bookings</span><strong>6 times</strong></div></div><div class="tag-row"><span class="status-pill urgent">Urgent</span><span class="status-pill priority">Purple Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-orange category-important" data-priority="orange" data-category="important"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange is-active"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=15" alt="Ishita Bose"><div><span class="mini-label">Priority client</span><h3>Ishita Bose</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Bengaluru</strong></div><div><span>Bookings</span><strong>9 times</strong></div></div><div class="tag-row"><span class="status-pill important">Important</span><span class="status-pill priority">Orange Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-teal category-no-rush" data-priority="teal" data-category="no-rush"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal is-active"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=16" alt="Daniel Lee"><div><span class="mini-label">Later today</span><h3>Daniel Lee</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Seoul</strong></div><div><span>Bookings</span><strong>3 times</strong></div></div><div class="tag-row"><span class="status-pill no-rush">No Rush</span><span class="status-pill priority">Teal Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-black category-emergency" data-priority="black" data-category="emergency"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black is-active"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=17" alt="Aditi Mehra"><div><span class="mini-label">Same day</span><h3>Aditi Mehra</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Chandigarh</strong></div><div><span>Bookings</span><strong>13 times</strong></div></div><div class="tag-row"><span class="status-pill emergency">Emergency</span><span class="status-pill priority">Black Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-purple category-urgent" data-priority="purple" data-category="urgent"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple is-active"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=18" alt="Yusuf Ali"><div><span class="mini-label">Need callback</span><h3>Yusuf Ali</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Hyderabad</strong></div><div><span>Bookings</span><strong>7 times</strong></div></div><div class="tag-row"><span class="status-pill urgent">Urgent</span><span class="status-pill priority">Purple Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-orange category-important" data-priority="orange" data-category="important"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange is-active"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=19" alt="Tara Nair"><div><span class="mini-label">Senior lead</span><h3>Tara Nair</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Goa</strong></div><div><span>Bookings</span><strong>8 times</strong></div></div><div class="tag-row"><span class="status-pill important">Important</span><span class="status-pill priority">Orange Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-teal category-no-rush" data-priority="teal" data-category="no-rush"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal is-active"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=20" alt="Leo Martin"><div><span class="mini-label">Warm lead</span><h3>Leo Martin</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Melbourne</strong></div><div><span>Bookings</span><strong>2 times</strong></div></div><div class="tag-row"><span class="status-pill no-rush">No Rush</span><span class="status-pill priority">Teal Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-black category-emergency" data-priority="black" data-category="emergency"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black is-active"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=21" alt="Pooja Verma"><div><span class="mini-label">High pressure</span><h3>Pooja Verma</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Indore</strong></div><div><span>Bookings</span><strong>14 times</strong></div></div><div class="tag-row"><span class="status-pill emergency">Emergency</span><span class="status-pill priority">Black Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-purple category-urgent" data-priority="purple" data-category="urgent"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple is-active"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=22" alt="Arjun Paul"><div><span class="mini-label">Fast follow-up</span><h3>Arjun Paul</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Nagpur</strong></div><div><span>Bookings</span><strong>5 times</strong></div></div><div class="tag-row"><span class="status-pill urgent">Urgent</span><span class="status-pill priority">Purple Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-orange category-important" data-priority="orange" data-category="important"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange is-active"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=23" alt="Meera Kapoor"><div><span class="mini-label">Important note</span><h3>Meera Kapoor</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Noida</strong></div><div><span>Bookings</span><strong>8 times</strong></div></div><div class="tag-row"><span class="status-pill important">Important</span><span class="status-pill priority">Orange Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-teal category-no-rush" data-priority="teal" data-category="no-rush"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal is-active"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=24" alt="Chris Owen"><div><span class="mini-label">Later</span><h3>Chris Owen</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Dublin</strong></div><div><span>Bookings</span><strong>1 time</strong></div></div><div class="tag-row"><span class="status-pill no-rush">No Rush</span><span class="status-pill priority">Teal Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-black category-emergency" data-priority="black" data-category="emergency"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black is-active"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=25" alt="Riya Jain"><div><span class="mini-label">Immediate</span><h3>Riya Jain</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Bhopal</strong></div><div><span>Bookings</span><strong>15 times</strong></div></div><div class="tag-row"><span class="status-pill emergency">Emergency</span><span class="status-pill priority">Black Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-purple category-urgent" data-priority="purple" data-category="urgent"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple is-active"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=26" alt="Adrian Moss"><div><span class="mini-label">Action needed</span><h3>Adrian Moss</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Berlin</strong></div><div><span>Bookings</span><strong>4 times</strong></div></div><div class="tag-row"><span class="status-pill urgent">Urgent</span><span class="status-pill priority">Purple Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-orange category-important" data-priority="orange" data-category="important"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange is-active"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=27" alt="Simran Kaur"><div><span class="mini-label">Client revisit</span><h3>Simran Kaur</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Amritsar</strong></div><div><span>Bookings</span><strong>9 times</strong></div></div><div class="tag-row"><span class="status-pill important">Important</span><span class="status-pill priority">Orange Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-teal category-no-rush" data-priority="teal" data-category="no-rush"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal is-active"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=28" alt="Nina George"><div><span class="mini-label">Backlog</span><h3>Nina George</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Trivandrum</strong></div><div><span>Bookings</span><strong>2 times</strong></div></div><div class="tag-row"><span class="status-pill no-rush">No Rush</span><span class="status-pill priority">Teal Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-black category-emergency" data-priority="black" data-category="emergency"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black is-active"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=29" alt="Varun Dev"><div><span class="mini-label">Critical</span><h3>Varun Dev</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Patna</strong></div><div><span>Bookings</span><strong>10 times</strong></div></div><div class="tag-row"><span class="status-pill emergency">Emergency</span><span class="status-pill priority">Black Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-purple category-urgent" data-priority="purple" data-category="urgent"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple is-active"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=30" alt="Mason Reed"><div><span class="mini-label">Need reply</span><h3>Mason Reed</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Chicago</strong></div><div><span>Bookings</span><strong>5 times</strong></div></div><div class="tag-row"><span class="status-pill urgent">Urgent</span><span class="status-pill priority">Purple Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-orange category-important" data-priority="orange" data-category="important"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange is-active"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=31" alt="Priya Sood"><div><span class="mini-label">Top account</span><h3>Priya Sood</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Gurugram</strong></div><div><span>Bookings</span><strong>8 times</strong></div></div><div class="tag-row"><span class="status-pill important">Important</span><span class="status-pill priority">Orange Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-teal category-no-rush" data-priority="teal" data-category="no-rush"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal is-active"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=32" alt="Owen Blake"><div><span class="mini-label">Low queue</span><h3>Owen Blake</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Auckland</strong></div><div><span>Bookings</span><strong>1 time</strong></div></div><div class="tag-row"><span class="status-pill no-rush">No Rush</span><span class="status-pill priority">Teal Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-black category-emergency" data-priority="black" data-category="emergency"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black is-active"></button><button type="button" class="priority-dot purple"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=33" alt="Sneha Pillai"><div><span class="mini-label">Critical follow-up</span><h3>Sneha Pillai</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Coimbatore</strong></div><div><span>Bookings</span><strong>16 times</strong></div></div><div class="tag-row"><span class="status-pill emergency">Emergency</span><span class="status-pill priority">Black Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+        <article class="contact-card priority-purple category-urgent" data-priority="purple" data-category="urgent"><div class="card-stack"></div><div class="card-body"><div class="card-toolbar"><div class="quick-actions"><button type="button" class="icon-btn">+</button><button type="button" class="icon-btn">↑</button><button type="button" class="icon-btn">↓</button></div><div class="priority-dots"><button type="button" class="priority-dot black"></button><button type="button" class="priority-dot purple is-active"></button><button type="button" class="priority-dot orange"></button><button type="button" class="priority-dot teal"></button></div></div><div class="profile-row"><img src="https://i.pravatar.cc/160?img=34" alt="Dev Mehta"><div><span class="mini-label">Need today</span><h3>Dev Mehta</h3></div></div><div class="meta-grid"><div><span>Home town</span><strong>Vadodara</strong></div><div><span>Bookings</span><strong>6 times</strong></div></div><div class="tag-row"><span class="status-pill urgent">Urgent</span><span class="status-pill priority">Purple Priority</span></div><div class="cta-row"><button type="button" class="card-btn card-btn-dark">Call</button><button type="button" class="card-btn">Message</button></div></div></article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
