@@ -58,6 +58,7 @@ toaster("Download Started.."); // this will give a toaster notif on screen
 setTimeout(()=>{
     toaster("Download Done!")
 }, 2000) // will occur after 2 secs.
+// new changes about to happen
 
 
 
