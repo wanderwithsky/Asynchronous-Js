@@ -13,7 +13,6 @@ const userManager = {
         e.preventDefault();
         this.addUser();
         this.renderUi();
-        this.removeUser()
     },
     addUser: function () {
         this.users.push({
@@ -26,6 +25,7 @@ const userManager = {
     },
     removeUser: function (index) {
         this.users.splice(index, 1);
+        this.renderUi();
     },
     renderUi: function () {
         const container = document.querySelector("#cardContainer");
