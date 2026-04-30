@@ -42,7 +42,6 @@ const userManager = {
             <p class="bio">${user.bio}</p>
             <button onclick="userManager.removeUser(${index})">Delete</button>
         `;
-
             container.appendChild(card);
         });
     },
