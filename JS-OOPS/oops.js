@@ -82,3 +82,54 @@
 // })
 
 // callback function -> ek function jo ki pass ho parameter dusre function me wo callback fnc hota hai
+
+function profileLekarAao(username, cb) {
+    console.log("Fetching profile data...");
+    setTimeout(() => {
+        cb({
+            id: 1212,
+            username,
+            age: 24,
+            email: "aakashbhattacharya30@gmail.com"
+        })
+    }, 2000);
+}
+
+function postsLekarAao(id, cb) {
+    console.log("Fetching all posts...");
+
+    setTimeout(() => {
+        cb({
+            id,
+            posts: [
+                "hey",
+                "hello ji",
+                "good morning ji"
+            ]
+        })
+    }, 3000);
+}
+
+function savedPosts(id, cb) {
+    console.log("Fetching all saved posts...");
+    setTimeout(() => {
+        cb({
+            id,
+            posts: [
+                1,
+                22,
+                24,
+                564
+            ]
+        })
+    }, 2000);
+}
+profileLekarAao("realakaxh", function (data) {
+    console.log(data);
+    postsLekarAao(data.id, function (posts) {
+        console.log(posts);
+        savedPosts(data.id, function (saved) {
+            console.log(saved);
+        })
+    })
+})
