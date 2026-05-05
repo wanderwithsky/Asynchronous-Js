@@ -68,3 +68,35 @@ let user2 = new User("Aman");
 
 
 // Debouncing -> aap koi action kar rhe ho and aap ye nahi chahte har action pe kuch ho, jab bhi mere actions ke beech mein koi specific gap aajaye to phir reaction perform ho
+
+function debounce(fnc, delay) {
+    let timer;
+    return function (...args) {
+        clearTimeout(timer)
+        timer = setTimeout(function () {
+            fnc(...args)
+        }, delay)
+    }
+
+}
+document.querySelector("input")
+    .addEventListener("input", debounce(
+        function () {
+            console.log("hey");
+        }, 1000)
+    )
+
+// Throttle -> Throttle ensures a function runs at most once in a fixed time interval, no matter how many times the event fires.
+
+function throttle(fn, delay) {
+    let lastCall = 0;
+
+    return function (...args) {
+        const now = Date.now();
+
+        if (now - lastCall >= delay) {
+            lastCall = now;
+            fn.apply(this, args);
+        }
+    };
+}
